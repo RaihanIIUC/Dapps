@@ -7,12 +7,17 @@ import styled from "styled-components";
 import Header from './Header';
   import "bootstrap/dist/css/bootstrap.min.css";
 
+import { connect } from "react-redux";
+import { postAddAction } from '../redux/actions/ProfileActions';
+
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client')
 const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) // leaving out the arguments will default to these values
 
 class Main extends Component {
+
+  
 
   async componentWillMount() {
     await this.loadWeb3()
@@ -90,7 +95,11 @@ class Main extends Component {
       this.state.decentragram.methods.uploadImage(result[0].hash, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
         this.setState({ loading: false })
       })
+     
     })
+    console.log(this.state,null,'state');
+ this.props.postAddAction(this.state);
+
   }
 
   tipImageOwner(id, tipAmount) {
@@ -112,6 +121,7 @@ class Main extends Component {
     this.uploadImage = this.uploadImage.bind(this)
     this.tipImageOwner = this.tipImageOwner.bind(this)
     this.captureFile = this.captureFile.bind(this)
+    
   }
 
   render() {
@@ -139,6 +149,12 @@ class Main extends Component {
 const Container = styled.div`
   grid-area: main;
 `;
-export default Main;
+// export default Main;
 
- 
+ const post = this.state;
+const mapDispatchToProps = (dispatch, post) => {
+  return {
+    postAddAction: () => dispatch(postAddAction(post)),
+  };
+};
+export default connect(null, mapDispatchToProps)(Main)
