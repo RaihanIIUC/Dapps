@@ -5,7 +5,7 @@ import Identicon from 'identicon.js';
  import MainForm from './Main/MainForm';
 import styled from "styled-components";
 import Header from './Header';
-  import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 
 
@@ -21,8 +21,9 @@ class Main extends Component {
      
  
      await axios.get("http://localhost:8000/api/users/show_post")
-       .then((res) => {
-         console.log(res, "data");
+       .then((posts) => {
+         const { data } = posts;
+         console.log(data, "data");
        })
        .catch((error) => {
          console.log(error, "datas error");

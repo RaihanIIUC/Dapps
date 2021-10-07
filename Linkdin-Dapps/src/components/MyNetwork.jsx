@@ -1,20 +1,18 @@
 import styled from "styled-components";
 import Leftside from "./Leftside";
-import Main from "./Main";
-
+import Post from "./Post";
+ 
 import Rightside from "./Rightside";
 
-const Home = (props) => {
+const MyNetwork = (props) => {
   return (
     <Container>
-      <Section>
-        
-      </Section>
+      <Section />       
+ 
       <Layout>
         <Leftside />
-        <Main />
-        <Rightside />
-      </Layout>
+         <Post />
+       </Layout>
     </Container>
   );
 };
@@ -34,7 +32,7 @@ const Content = styled.div`
 
 const Section = styled.section`
   min-height: 50px;
-  padding: 16px 0;
+   padding: 16px 0;
   box-sizing: content-box;
   text-align: center;
   text-decoration: underline;
@@ -63,9 +61,10 @@ const Section = styled.section`
 const Layout = styled.div`
   display: grid;
   grid-template-areas: "leftside main rightside";
-  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 25fr) minmax(30px, 2fr);
   column-gap: 25px;
   row-gap: 25px;
+ 
   /* grid-template-row: auto; */
   margin: 25px 0;
   @media (max-width: 768px) {
@@ -75,4 +74,4 @@ const Layout = styled.div`
   }
 `;
 
-export default Home;
+export default MyNetwork;

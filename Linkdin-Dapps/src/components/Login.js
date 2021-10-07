@@ -9,7 +9,9 @@ const Login = (props) => {
           <img src="/images/login-logo.svg" alt="" />
         </a>
         <div>
-         </div>
+          <Join>Join now</Join>
+          <SignIn>Sign in</SignIn>
+        </div>
       </Nav>
       <Section>
         <Hero>
@@ -18,9 +20,7 @@ const Login = (props) => {
         </Hero>
         <Form>
           <Google>
-            <Link to="home">
-            Let's Jump's to Dapps
-            </Link>            
+            <Link to="home">Let's Jump's to Dapps</Link>
           </Google>
         </Form>
       </Section>

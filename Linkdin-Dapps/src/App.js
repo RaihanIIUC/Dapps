@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
-import Test from "./components/Test";
-
+import MyNetwork from "./components/MyNetwork";
+ 
 function App() {
   return (
     <div className="App">
@@ -14,12 +14,12 @@ function App() {
             <Login />
           </Route>
           <Route path="/home">
-             <Header />
+            <Header />
             <Home />
           </Route>
           <Route path="/my-network">
-             <Header />
-             <Test />
+            <Header />
+            <MyNetwork />
           </Route>
         </Switch>
       </Router>

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 
 const Header = (props) => {
   return (
@@ -20,17 +22,17 @@ const Header = (props) => {
         <Nav>
           <NavListWrap>
             <NavList className="active">
-              <a>
+              <Link to="home">
                 <img src="/images/nav-home.svg" alt="" />
                 <span>Home</span>
-              </a>
+              </Link>
             </NavList>
 
             <NavList>
-              <a>
+              <Link to="my-network">
                 <img src="/images/nav-network.svg" alt="" />
                 <span>My Network</span>
-              </a>
+              </Link>
             </NavList>
 
             <NavList>

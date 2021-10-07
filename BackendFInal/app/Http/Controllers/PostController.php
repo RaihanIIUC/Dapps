@@ -46,7 +46,7 @@ class PostController extends Controller
     public function show()
     {
           $post = Post::all();
-           return  [ $this->respondOk('success') ,$this->respondWithSuccess($post)  ];
+           return   $this->respondWithSuccess($post);
          
         //  return response()->json([
         //     'success' => true,
