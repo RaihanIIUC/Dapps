@@ -34,7 +34,7 @@ const Header = (props) => {
                 <span>My Network</span>
               </Link>
             </NavList>
-
+{/* 
             <NavList>
               <a>
                 <img src="/images/nav-jobs.svg" alt="" />
@@ -47,7 +47,7 @@ const Header = (props) => {
                 <img src="/images/nav-messaging.svg" alt="" />
                 <span>Messaging</span>
               </a>
-            </NavList>
+            </NavList> */}
 
             <NavList>
               <a>
@@ -68,7 +68,7 @@ const Header = (props) => {
               </SignOut>
             </User>
 
-            <Work>
+            {/* <Work>
               <a>
                 <img src="/images/nav-work.svg" alt="" />
                 <span>
@@ -76,7 +76,7 @@ const Header = (props) => {
                   <img src="/images/down-icon.svg" alt="" />
                 </span>
               </a>
-            </Work>
+            </Work> */}
           </NavListWrap>
         </Nav>
       </Content>

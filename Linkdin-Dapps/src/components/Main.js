@@ -20,14 +20,14 @@ class Main extends Component {
     await this.loadBlockchainData()
      
  
-     await axios.get("http://localhost:8000/api/users/show_post")
-       .then((posts) => {
-         const { data } = posts;
-         console.log(data, "data");
-       })
-       .catch((error) => {
-         console.log(error, "datas error");
-       });
+    //  await axios.get("http://localhost:8000/api/users/show_post")
+    //    .then((posts) => {
+    //      const { data } = posts;
+    //      console.log(data, "data");
+    //    })
+    //    .catch((error) => {
+    //      console.log(error, "datas error");
+    //    });
   }
 
   async loadWeb3() {
@@ -41,6 +41,7 @@ class Main extends Component {
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
+  
   }
 
   async loadBlockchainData() {
