@@ -4,9 +4,9 @@ import axios from 'axios';
 import Moment from "react-moment";
 function Post() {
 const [posts, setPosts] = useState([]);
- posts.map((post) => {
-   console.log(post,NaN, ' ');
-  })
+//  posts?.map((post) => {
+//    console.log(post,NaN, ' ');
+//   })
 const getData = async () => {
   await axios
     .get("http://localhost:8000/api/users/show_post")
@@ -33,7 +33,7 @@ const getData = async () => {
           </tr>
         </thead>
         <tbody>
-          {posts.map((post, index) => (
+          {posts?.map((post, index) => (
             <tr key={index}>
               <th scope="row">{post.user_id}</th>
               <td scope="row">{post.title}</td>
