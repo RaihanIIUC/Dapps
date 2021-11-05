@@ -16,7 +16,8 @@ const Login = (props) => {
       <Section>
         <Hero>
           <h1>Welcome to Decentralized Social Network</h1>
-          <img src="/images/login-hero.svg" alt="" />
+          {/* <img src="/images/login-hero.svg" alt="" /> */}
+          <img src="/images/ipfs2.png" alt=""  />
         </Hero>
         <Form>
           <Google>
@@ -123,28 +124,29 @@ const Hero = styled.div`
 
   img {
     /* z-index: -1; */
-    width: 700px;
-    height: 670px;
+    width: 500x;
+    height: 500px;
     position: absolute;
     bottom: -2px;
-    right: -150px;
-    animation: myAnim 5s ease-in-out 3s 6 alternate-reverse both;
+    right: -30px;
+    top : -1px;
+    // animation: myAnim 5s ease-in-out 3s 6 alternate-reverse both;
     @media (max-width: 768px) {
       top: 230px;
       width: initial;
       position: initial;
       height: initial;
     }
-    @keyframes myAnim {
-      0% {
-        opacity: 0;
-        transform: rotate(-540deg) scale(0);
-      }
+    // @keyframes myAnim {
+    //   0% {
+    //     opacity: 0;
+    //     transform: rotate(-540deg) scale(0);
+    //   }
 
-      100% {
-        opacity: 1;
-        transform: rotate(0) scale(1);
-      }
+    //   100% {
+    //     opacity: 1;
+    //     transform: rotate(0) scale(1);
+    //   }
     }
   }
 `;

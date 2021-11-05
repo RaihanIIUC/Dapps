@@ -3,10 +3,7 @@ import Identicon from "identicon.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 
-
-const PostWrapper = styled.div`
- 
-`;
+const PostWrapper = styled.div``;
 class MainForm extends Component {
   render() {
     return (
@@ -28,6 +25,9 @@ class MainForm extends Component {
                 }}
               >
                 <input
+                  style={{
+                    backgroundColor: "#803A0A",
+                  }}
                   type="file"
                   accept=".jpg, .jpeg, .png, .bmp, .gif"
                   onChange={this.props.captureFile}
@@ -35,6 +35,9 @@ class MainForm extends Component {
                 <div className="form-group mr-sm-2">
                   <br></br>
                   <input
+                    // style={{
+                    //   backgroundColor: "#803A0A",
+                    // }}
                     id="imageDescription"
                     type="text"
                     ref={(input) => {
@@ -49,7 +52,7 @@ class MainForm extends Component {
                   type="submit"
                   className="btn btn-primary btn-block btn-lg"
                 >
-                  Post 
+                  Post
                 </button>
               </form>
               <p>&nbsp;</p>
@@ -62,7 +65,12 @@ class MainForm extends Component {
                     className="card mb-4"
                     key={key}
                   >
-                    <div className="card-header">
+                    <div
+                      className="card-header"
+                      style={{
+                        backgroundColor: "#803A0A",
+                      }}
+                    >
                       <img
                         className="mr-2"
                         width="30"
@@ -75,41 +83,34 @@ class MainForm extends Component {
                       />
                       <small className="text-muted">{image.author}</small>
                     </div>
-                    <ul id="imageList"  style={{
-                      backgroundColor: "red",
-                    }} className="list-group list-group-flush">
+
+                    <ul
+                      id="imageList"
+                      // style={{
+                      //   backgroundColor: "red",
+                      // }}
+                      className="list-group list-group-flush"
+                    >
                       <li className="list-group-item">
-                        <p>{image.description}</p>
-                        <p className="text-center">
+                        <p class="text-center">
                           <img
                             src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                             style={{ maxWidth: "420px" }}
-                            alt="helo"
                           />
                         </p>
+                        <p>{image.description}</p>
                       </li>
-                      <li key={key} className="list-group-item py-2">
+                       <li key={key} className="list-group-item py-2">
                         <small className="float-left mt-1 text-muted">
-                          TIPS:{" "}
-                          {window.web3.utils.fromWei(
-                            image.tipAmount.toString(),
-                            "Ether"
-                          )}{" "}
-                          ETH
+                          TIPS: {window.web3.utils.fromWei(image.tipAmount.toString(), 'Ether')} ETH
                         </small>
                         <button
                           className="btn btn-link btn-sm float-right pt-0"
                           name={image.id}
                           onClick={(event) => {
-                            let tipAmount = window.web3.utils.toWei(
-                              "0.1",
-                              "Ether"
-                            );
-                            console.log(event.target.name, tipAmount);
-                            this.props.tipImageOwner(
-                              event.target.name,
-                              tipAmount
-                            );
+                            let tipAmount = window.web3.utils.toWei('0.1', 'Ether')
+                            console.log(event.target.name, tipAmount)
+                            this.props.tipImageOwner(event.target.name, tipAmount)
                           }}
                         >
                           TIP 0.1 ETH

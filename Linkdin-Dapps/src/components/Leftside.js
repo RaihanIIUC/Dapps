@@ -60,7 +60,7 @@ const ArtCard = styled.div`
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
-  background-color: #fff;
+  background-color: #803a0a;
   border-radius: 5px;
   transition: box-shadow 83ms;
   position: relative;

@@ -6,11 +6,13 @@ const Rightside = (props) => {
       <FollowCard>
         <Title>
           <h2>Add to your feed</h2>
-          <img src="/images/feed-icon.svg" alt="" />
+          {/* <img src="/images/feed-icon.svg" alt="" /> */}
         </Title>
 
         <FeedList>
-          <li>
+          <img src="/images/right_icons.png" alt="" width="300px" />
+
+          {/* <li>
             <a>
               <Avatar />
             </a>
@@ -27,19 +29,20 @@ const Rightside = (props) => {
               <span>#Video</span>
               <button>Follow</button>
             </div>
-          </li>
+          </li> */}
         </FeedList>
 
-        <Recommendation>
+        {/* <Recommendation>
           View all recommendations
           <img src="/images/right-icon.svg" alt="" />
-        </Recommendation>
+        </Recommendation> */}
       </FollowCard>
       <BannerCard>
-        <img
+        <img src="/images/bannerCard.png" alt="" />
+        {/* <img
           src="https://static-exp1.licdn.com/scds/common/u/images/promo/ads/li_evergreen_jobs_ad_300x250_v1.jpg"
           alt=""
-        />
+        /> */}
       </BannerCard>
     </Container>
   );
@@ -53,7 +56,7 @@ const FollowCard = styled.div`
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
-  background-color: #fff;
+  background-color: #803a0a;
   border-radius: 5px;
   position: relative;
   border: none;
