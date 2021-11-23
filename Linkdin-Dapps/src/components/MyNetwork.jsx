@@ -3,7 +3,7 @@ import Leftside from "./Leftside";
 import Post from "./Post";
  
 import Rightside from "./Rightside";
-
+ 
 const MyNetwork = (props) => {
   return (
     <Container>
