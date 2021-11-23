@@ -50,10 +50,10 @@ const Header = (props) => {
             </NavList> */}
 
             <NavList>
-              <a>
+              {/* <a>
                 <img src="/images/nav-notifications.svg" alt="" />
                 <span>Notifications</span>
-              </a>
+              </a> */}
             </NavList>
 
             <User>
