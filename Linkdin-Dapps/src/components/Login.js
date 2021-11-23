@@ -8,10 +8,10 @@ const Login = (props) => {
         <a href="/">
           <img src="/images/login-logo.svg" alt="" />
         </a>
-        <div>
+        {/* <div>
           <Join>Join now</Join>
           <SignIn>Sign in</SignIn>
-        </div>
+        </div> */}
       </Nav>
       <Section>
         <Hero>

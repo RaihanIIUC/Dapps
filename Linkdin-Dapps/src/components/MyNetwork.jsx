@@ -10,8 +10,7 @@ const MyNetwork = (props) => {
       <Section />       
  
       <Layout>
-        <Leftside />
-         <Post />
+          <Post />
        </Layout>
     </Container>
   );
@@ -66,12 +65,13 @@ const Layout = styled.div`
   row-gap: 25px;
  
   /* grid-template-row: auto; */
-  margin: 25px 0;
+  margin: 25px 130px;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     padding: 0 5px;
   }
+  margin-left: 130px;
 `;
 
 export default MyNetwork;
