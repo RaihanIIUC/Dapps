@@ -7,19 +7,19 @@ import Stack from "@mui/material/Stack";
 
 function Post() {
   const [posts, setPosts] = useState([]);
-  //  posts?.map((post) => {
-  //    console.log(post,NaN, ' ');
-  //   })
+  posts?.map((post) => {
+    console.log(post, NaN, " ");
+  });
   const getData = async () => {
-    await axios
-      .get("http://localhost:8000/api/users/show_post")
-      .then((res) => {
-        const { data } = res;
-        setPosts(data);
-      })
-      .catch((error) => {
-        console.log(error, "datas error");
-      });
+    // await axios
+    //   .get("http://localhost:8000/api/users/show_post")
+    //   .then((res) => {
+    //     const { data } = res;
+    //     setPosts(data);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error, "datas error");
+    //   });
   };
   useEffect(async () => {
     await getData();

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
 const Header = (props) => {
   return (
     <Container>
@@ -34,7 +33,7 @@ const Header = (props) => {
                 <span>My Network</span>
               </Link>
             </NavList>
-{/* 
+            {/* 
             <NavList>
               <a>
                 <img src="/images/nav-jobs.svg" alt="" />

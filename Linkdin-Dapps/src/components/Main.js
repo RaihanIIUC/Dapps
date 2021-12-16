@@ -1,32 +1,35 @@
-import Decentragram from '../abis/Decentragram.json'
-import React, { Component } from 'react';
-import Identicon from 'identicon.js';
-   import Web3 from 'web3';
- import MainForm from './Main/MainForm';
+import Decentragram from "../abis/Decentragram.json";
+import React, { Component } from "react";
+import Identicon from "identicon.js";
+import Web3 from "web3";
+import MainForm from "./Main/MainForm";
 import styled from "styled-components";
-import Header from './Header';
+import Header from "./Header";
 import "bootstrap/dist/css/bootstrap.min.css";
-import axios from 'axios';
-
+import axios from "axios";
 
 //Declare IPFS
-const ipfsClient = require('ipfs-http-client')
-const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) // leaving out the arguments will default to these values
+const ipfsClient = require("ipfs-http-client");
+const ipfs = ipfsClient({
+  host: "ipfs.infura.io",
+  port: 5001,
+  protocol: "https",
+}); // leaving out the arguments will default to these values
 
 class Main extends Component {
   async componentWillMount() {
     await this.loadWeb3();
     await this.loadBlockchainData();
 
-    await axios
-      .get("http://localhost:8000/api/users/show_post")
-      .then((posts) => {
-        const { data } = posts;
-        console.log(data, "data");
-      })
-      .catch((error) => {
-        console.log(error, "datas error");
-      });
+    // await axios
+    //   .get("http://localhost:8000/api/users/show_post")
+    //   .then((posts) => {
+    //     const { data } = posts;
+    //     console.log(data, "data");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error, "datas error");
+    //   });
   }
 
   async loadWeb3() {
@@ -106,24 +109,21 @@ class Main extends Component {
           // window.location.reload();
           this.setState({ loading: false });
 
-          axios
-            .post("http://localhost:8000/api/users/add_post", {
-              user_id: this.state.account,
-              title: description,
-              image: result[0].hash,
-            })
-            .then((response) => {
-              console.log(response, null);
-            })
-            .catch((error) => {
-              console.log(error, undefined, "errro");
-            });
- 
+          // axios
+          //   .post("http://localhost:8000/api/users/add_post", {
+          //     user_id: this.state.account,
+          //     title: description,
+          //     image: result[0].hash,
+          //   })
+          //   .then((response) => {
+          //     console.log(response, null);
+          //   })
+          //   .catch((error) => {
+          //     console.log(error, undefined, "errro");
+          //   });
         });
-
- 
     });
-      
+
     console.log("hello we are now in last part");
   }
 
@@ -177,5 +177,3 @@ const Container = styled.div`
   grid-area: main;
 `;
 export default Main;
-
- 
