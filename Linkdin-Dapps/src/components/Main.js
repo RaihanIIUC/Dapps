@@ -21,15 +21,15 @@ class Main extends Component {
     await this.loadWeb3();
     await this.loadBlockchainData();
 
-    // await axios
-    //   .get("http://localhost:8000/api/users/show_post")
-    //   .then((posts) => {
-    //     const { data } = posts;
-    //     console.log(data, "data");
-    //   })
-    //   .catch((error) => {
-    //     console.log(error, "datas error");
-    //   });
+    await axios
+      .get("http://localhost:8000/api/users/show_post")
+      .then((posts) => {
+        const { data } = posts;
+        console.log(data, "data");
+      })
+      .catch((error) => {
+        console.log(error, "datas error");
+      });
   }
 
   async loadWeb3() {
@@ -109,18 +109,18 @@ class Main extends Component {
           // window.location.reload();
           this.setState({ loading: false });
 
-          // axios
-          //   .post("http://localhost:8000/api/users/add_post", {
-          //     user_id: this.state.account,
-          //     title: description,
-          //     image: result[0].hash,
-          //   })
-          //   .then((response) => {
-          //     console.log(response, null);
-          //   })
-          //   .catch((error) => {
-          //     console.log(error, undefined, "errro");
-          //   });
+          axios
+            .post("http://localhost:8000/api/users/add_post", {
+              user_id: this.state.account,
+              title: description,
+              image: result[0].hash,
+            })
+            .then((response) => {
+              console.log(response, null);
+            })
+            .catch((error) => {
+              console.log(error, undefined, "errro");
+            });
         });
     });
 
